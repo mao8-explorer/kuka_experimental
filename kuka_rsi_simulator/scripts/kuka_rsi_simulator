@@ -61,6 +61,7 @@ if __name__ == '__main__':
     rospy.loginfo('{}: Started'.format(node_name))
 
     try:
+
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         rospy.loginfo('{}, Successfully created socket'.format(node_name))
         s.settimeout(1)
@@ -77,6 +78,7 @@ if __name__ == '__main__':
     while not rospy.is_shutdown():
         try:
             msg = create_rsi_xml_rob(act_joint_pos, cmd_joint_pos, timeout_count, ipoc)
+            rospy.loginfo("running__")
             rsi_act_pub.publish(msg)
             s.sendto(msg, (host, port))
             recv_msg, addr = s.recvfrom(1024)
@@ -85,10 +87,10 @@ if __name__ == '__main__':
             act_joint_pos = cmd_joint_pos + des_joint_correction_absolute
             ipoc += 1
             time.sleep(cycle_time / 2)
-        except socket.timeout, msg:
+        except socket.timeout as msg:
             rospy.logwarn('{}: Socket timed out'.format(node_name))
             timeout_count += 1
-        except socket.error, e:
+        except socket.error as e:
             if e.errno != errno.EINTR:
                 raise
 

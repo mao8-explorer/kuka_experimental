@@ -1,4 +1,4 @@
 eki:
-  robot_address: "address.of.robot.controller"
-  robot_port: "54600"
-  socket_timeout: 5
+  robot_address: "172.31.1.147"
+  robot_port: "54602"
+  socket_timeout: 10

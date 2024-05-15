@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <launch>
+    <!-- <param name="robot_description" command="$(find xacro)/xacro '$(find kuka_kr210_support)/urdf/kr210l150.xacro'"/> -->
     <rosparam file="$(find kuka_eki_hw_interface)/test/test_params.yaml" command="load" />
 
     <!-- Start EKI interface -->
