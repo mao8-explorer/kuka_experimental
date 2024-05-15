@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/zm/KUKA/kuka_experimental/src/kuka_experimental/kuka_rsi_hw_interface/src",
-      "program": "/home/zm/KUKA/kuka_experimental/src/kuka_experimental/kuka_rsi_hw_interface/src/build/Debug/outDebug",
+      "cwd": "/home/zm/KUKA/kuka_experimental/src/kuka_experimental/kuka_eki_hw_interface/src",
+      "program": "/home/zm/KUKA/kuka_experimental/src/kuka_experimental/kuka_eki_hw_interface/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",
       "setupCommands": [
