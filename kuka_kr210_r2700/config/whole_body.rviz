@@ -6,9 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /RobotModel1/Links1
+        - /TF1
         - /TF1/Frames1
-        - /TF1/Frames1/joint_a6_Link1
+        - /PointStamped1
       Splitter Ratio: 0.5
     Tree Height: 827
   - Class: rviz/Selection
@@ -68,6 +68,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        dummy_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         joint_a1_Link:
           Alpha: 1
           Show Axes: false
@@ -118,6 +122,8 @@ Visualization Manager:
         All Enabled: false
         base_link:
           Value: true
+        dummy_link:
+          Value: true
         joint_a1_Link:
           Value: false
         joint_a2_Link:
@@ -127,7 +133,7 @@ Visualization Manager:
         joint_a4_Link:
           Value: false
         joint_a5_Link:
-          Value: false
+          Value: true
         joint_a6_Link:
           Value: true
         joint_a7_Link:
@@ -139,16 +145,28 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          joint_a1_Link:
-            joint_a2_Link:
-              joint_a3_Link:
-                joint_a4_Link:
-                  joint_a5_Link:
-                    joint_a6_Link:
-                      joint_a7_Link:
-                        {}
+        dummy_link:
+          base_link:
+            joint_a1_Link:
+              joint_a2_Link:
+                joint_a3_Link:
+                  joint_a4_Link:
+                    joint_a5_Link:
+                      joint_a6_Link:
+                        joint_a7_Link:
+                          {}
       Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 204; 41; 204
+      Enabled: true
+      History Length: 1
+      Name: PointStamped
+      Queue Size: 10
+      Radius: 0.05000000074505806
+      Topic: /kuka_eki_state_publisher/ee_pose
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
@@ -174,7 +192,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.8601019382476807
+      Distance: 5.089824199676514
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -182,17 +200,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.5510836839675903
-        Y: 1.4005497694015503
-        Z: 1.3893488645553589
+        X: 1.6014307737350464
+        Y: 2.019169807434082
+        Z: 1.1332650184631348
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.03539799153804779
+      Pitch: 0.5853977799415588
       Target Frame: <Fixed Frame>
-      Yaw: 1.2703900337219238
+      Yaw: 1.9103918075561523
     Saved: ~
 Window Geometry:
   Displays:

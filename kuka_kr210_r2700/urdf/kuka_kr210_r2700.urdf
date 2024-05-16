@@ -390,7 +390,7 @@
     name="joint_a6"
     type="revolute">
     <origin
-      xyz="0 0 0.169867899999995"
+      xyz="0 0 0.221867899999995"
       rpy="0 0 0" />
     <parent
       link="joint_a5_Link" />
